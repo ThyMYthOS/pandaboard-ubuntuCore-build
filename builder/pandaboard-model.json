@@ -1,0 +1,11 @@
+{
+  "type": "model",
+  "authority-id": "haugALe5yeJFg0aObc0gxsC2gir8Pxc0",
+  "brand-id": "haugALe5yeJFg0aObc0gxsC2gir8Pxc0",
+  "series": "16",
+  "model": "pandaboard",
+  "architecture": "armhf",
+  "gadget": "pandaboard",
+  "kernel": "pandaboard-kernel",
+  "timestamp": "2018-01-28T14:00:00+00:00"
+}

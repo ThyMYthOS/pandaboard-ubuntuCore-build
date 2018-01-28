@@ -1,13 +1,14 @@
 # snapcraft kernel build artefacts
 builder/kernel/parts/
 builder/kernel/prime/
-builder/kernel/roseapple-pi-kernel_*armhf.snap
+builder/kernel/pandaboard-kernel_*armhf.snap
+builder/kernel/snap/.snapcraft
 builder/kernel/stage/
 
 # snaps and images
-builder/roseapple-pi-*.img.xz
-builder/roseapple-pi_*.snap
-builder/roseapple-pi-kernel_*armhf.snap
+builder/pandaboard-*.img.xz
+builder/pandaboard_*.snap
+builder/pandaboard-kernel_*armhf.snap
 
 # uboot build
 u-boot-build/
@@ -17,3 +18,6 @@ u-boot/
 builder/gadget/boot-assets/
 builder/gadget/uboot.conf
 builder/gadget/uboot.env
+
+# ubuntu-image work dir
+builder/build

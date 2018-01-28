@@ -1,17 +1,21 @@
-device-tree: actduino_bubble_gum_sdboot_linux.dtb
+device-tree: omap4-panda.dtb
 volumes:
-  roseapplepi:
+  pandaboard:
     schema: mbr
     bootloader: u-boot
     structure:
-      - offset: 2097152 #4096*512
-        size: 2097152 # 2M
-        type: mbr
+      - name: mlo
+        type: bare
+        size: 131072
+        offset: 131072
         content:
-            - image: boot-assets/bootloader.bin
-              offset: 512 #(4097-4096)*512
-            - image: boot-assets/u-boot.bin
-              offset: 1048576 #(6144-4096)*512
+          - image: boot-assets/MLO
+      - name: u-boot
+        type: bare
+        size: 786432
+        offset: 393216
+        content:
+          - image: boot-assets/u-boot.bin
       - type: 0C
         filesystem: vfat
         filesystem-label: system-boot

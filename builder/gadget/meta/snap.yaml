@@ -1,8 +1,8 @@
-name: roseapple-pi
+name: pandaboard
 version: 16.04-1
-summary: Roseapple Pi support package
+summary: Pandaboard support package
 description: |
- Support files for booting Roseapple Pi
+ Support files for booting pandaboard
 type: gadget
-architectures:
-    - armhf
+grade: devel
+architectures: [ armhf ]
