@@ -1,7 +1,7 @@
 include common.mk
 
 GADGET_UBOOT_MLO := $(GADGET_DIR)/boot-assets/MLO
-GADGET_UBOOT_BIN := $(GADGET_DIR)/boot-assets/u-boot.bin
+GADGET_UBOOT_BIN := $(GADGET_DIR)/boot-assets/u-boot.img
 GADGET_SNAP := $(OUTPUT_DIR)/pandaboard_$(GADGET_VERSION)*.snap
 
 # for preloader packaging
@@ -28,7 +28,6 @@ u-boot:
 	cp -f $(UBOOT_BIN) $(GADGET_UBOOT_BIN)
 
 preload: u-boot
-	#$(TOOLS_DIR)/utils/$(BOOTLOADER_PACK) $(PRELOAD_DIR)/bootloader.bin $(PRELOAD_DIR)/bootloader.ini $(GADGET_DIR)/boot-assets/bootloader.bin
 	mkenvimage -r -s 131072  -o $(GADGET_DIR)/uboot.env $(GADGET_DIR)/uboot.env.in
 	@if [ ! -f $(GADGET_DIR)/uboot.conf ]; then ln -s uboot.env $(GADGET_DIR)/uboot.conf; fi
 
