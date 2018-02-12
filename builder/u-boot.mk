@@ -18,6 +18,7 @@ $(UBOOT_BIN): $(UBOOT_SRC)
 
 $(UBOOT_SRC):
 	git clone --depth=1 $(UBOOT_REPO) -b $(UBOOT_BRANCH) u-boot
+	sed '44 a #define CONFIG_SYS_REDUNDAND_ENVIRONMENT' -i u-boot/include/configs/omap4_panda.h
 
 u-boot: $(UBOOT_BIN)
 
