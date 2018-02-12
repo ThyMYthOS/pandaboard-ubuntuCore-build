@@ -18,7 +18,10 @@ parts:
             - CONFIG_LOCALVERSION="-panda"
             - CONFIG_DEBUG_INFO=n
             - CONFIG_NAMESPACES=y
+            - CONFIG_CGROUPS=y
+            - CONFIG_AUTOFS4_FS=m
             - CONFIG_SQUASHFS=m
+            - CONFIG_SQUASHFS_XZ=y
             - CONFIG_DEVPTS_MULTIPLE_INSTANCES=y
             - CONFIG_MAC80211_LEDS=y
             - CONFIG_RFKILL_LEDS=y
